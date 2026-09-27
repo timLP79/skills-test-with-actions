@@ -68,3 +68,11 @@ def test_get_nth_fibonacci_ten():
 
   # Assert
   assert result == 55
+
+# fixed test coverage
+def test_fibonacci_negative():
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(-1)
+		
+def test_fibonacci_zero():
+    assert get_nth_fibonacci(0) == 0
